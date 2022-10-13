@@ -23,6 +23,7 @@
   --BG: var(--White);
   --BGtop: var(--VeryPaleBlue);
   --CardBG: var(--LightGrayishBlue);
+  --CardBGhov: hsl(227, 47%, 92%);
   --Text: var(--DarkGrayishBlue);
   --Text2: var(--VeryDarkBlue);
   font-size: 14px;
@@ -72,7 +73,7 @@ body {
   height: 26px;
 }
 .header-mode-toggle input:checked + .slider:before {
-  translate: -22px;
+  translate: -26px;
 }
 .header-mode-toggle input {
   opacity: 0;
@@ -131,6 +132,10 @@ body {
   width: 100%;
   background-image: var(--Instagram);
 }
+.main__accounts_acc:hover {
+  background-color: var(--CardBGhov);
+  cursor: pointer;
+}
 .main__accounts_acc {
   padding: 2rem;
   display: flex;
@@ -177,6 +182,10 @@ body {
 .main__overview__grid {
   display: grid;
   gap: 1.5rem;
+}
+.main__overview__grid__item:hover {
+  background-color: var(--CardBGhov);
+  cursor: pointer;
 }
 .main__overview__grid__item {
   padding: 2rem 1.5rem;

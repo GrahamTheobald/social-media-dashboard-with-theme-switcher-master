@@ -4,6 +4,7 @@ const THEMES = {
         BG: 'hsl(0, 0%, 100%)',
         BGtop: 'hsl(225, 100%, 98%)',
         CardBG: 'hsl(227, 47%, 96%)',
+        CardBGhov: 'hsl(227. 47%, 92%)',
         Text: 'hsl(228, 12%, 44%)',
         Text2: 'hsl(230, 17%, 14%)',
     },
@@ -12,6 +13,7 @@ const THEMES = {
         BG: 'hsl(230, 17%, 14%)',
         BGtop: 'hsl(232, 19%, 15%)',
         CardBG: 'hsl(228, 28%, 20%)',
+        CardBGhov: 'hsl(228, 28%, 24%)',
         Text: 'hsl(228, 34%, 66%)',
         Text2: 'hsl(0, 0%, 100%)',
     }
