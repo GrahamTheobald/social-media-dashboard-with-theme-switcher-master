@@ -50,7 +50,7 @@ body {
 }
 .header-text {
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--Text2);
+  border-bottom: 1px solid var(--Text);
 }
 .header-text-title {
   font-size: 1.7rem;
@@ -83,6 +83,7 @@ body {
   position: absolute;
   inset: 0 0 0 0;
   background-color: var(--Toggle);
+  background-image: var(--Toggle);
   border-radius: 10rem;
   cursor: pointer;
   -webkit-transition: 0.4s;
@@ -147,6 +148,7 @@ body {
 .main__accounts_acc .acc-followers h2 {
   font-size: 3.5rem;
   color: var(--Text2);
+  text-align: center;
 }
 .main__accounts_acc .acc-followers p {
   text-transform: uppercase;
@@ -200,6 +202,33 @@ body {
   display: flex;
   gap: 0.2rem;
   padding-bottom: 0.4rem;
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    padding: 3rem 10rem 12rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header-text {
+    border: none;
+  }
+  .header-mode {
+    gap: 0.5rem;
+  }
+  .main {
+    translate: 0 -12rem;
+    padding: 3rem 10rem;
+  }
+  .main__accounts {
+    flex-direction: row;
+  }
+  .main__accounts_acc {
+    flex: 1;
+  }
+  .main__overview__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
