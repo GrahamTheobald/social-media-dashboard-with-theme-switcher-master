@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+:root {
+  --LimeGreen: hsl(163, 72%, 41%);
+  --BrightRed: hsl(356, 69%, 56%);
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --YouTube: hsl(348, 97%, 39%);
+  --Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --YouTube: hsl(348, 97%, 39%);
+  --Dark-Toggle: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --VeryDarkBlue: hsl(230, 17%, 14%);
+  --VeryDarkBlue2: hsl(232, 19%, 15%);
+  --DarkDesaturatedBlue: hsl(228, 28%, 20%);
+  --DesaturatedBlue: hsl(228, 34%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Toggle: hsl(230, 22%, 74%);
+  --White: hsl(0, 0%, 100%);
+  --VeryPaleBlue: hsl(225, 100%, 98%);
+  --LightGrayishBlue: hsl(227, 47%, 96%);
+  --DarkGrayishBlue: hsl(228, 12%, 44%);
+  --VeryDarkBlue: hsl(230, 17%, 14%);
+  --Toggle: var(--Light-Toggle);
+  --BG: var(--White);
+  --BGtop: var(--VeryPaleBlue);
+  --CardBG: var(--LightGrayishBlue);
+  --Text: var(--DarkGrayishBlue);
+  --Text2: var(--VeryDarkBlue);
+  font-size: 14px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter";
+  color: var(--Text);
+  font-weight: 700;
+  background-color: var(--BG);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--BGtop);
+  padding: 3rem 1.5rem 7rem 1.5rem;
+}
+.header-text {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--Text2);
+}
+.header-text-title {
+  font-size: 1.7rem;
+  color: var(--Text2);
+  margin-bottom: 0.5rem;
+}
+.header-mode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-mode-text.hidden {
+  display: none;
+}
+.header-mode-toggle {
+  position: relative;
+  display: block;
+  width: 52px;
+  height: 26px;
+}
+.header-mode-toggle input:checked + .slider:before {
+  translate: -22px;
+}
+.header-mode-toggle input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.header-mode-toggle .slider {
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: var(--Toggle);
+  border-radius: 10rem;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.header-mode-toggle .slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  right: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: var(--BGtop);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.main {
+  translate: 0 -7rem;
+  padding: 3rem 1.5rem;
+}
+.main__accounts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.main__accounts_acc.facebook {
+  border-top: 4px solid var(--Facebook);
+}
+.main__accounts_acc.twitter {
+  border-top: 4px solid var(--Twitter);
+}
+.main__accounts_acc.youtube {
+  border-top: 4px solid var(--YouTube);
+}
+.main__accounts_acc.instagram {
+  position: relative;
+  overflow: hidden;
+}
+.main__accounts_acc.instagram .acc-border {
+  position: absolute;
+  top: 0;
+  height: 4px;
+  width: 100%;
+  background-image: var(--Instagram);
+}
+.main__accounts_acc {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--CardBG);
+  border-radius: 0.5rem;
+}
+.main__accounts_acc .acc-tag {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.main__accounts_acc .acc-followers h2 {
+  font-size: 3.5rem;
+  color: var(--Text2);
+}
+.main__accounts_acc .acc-followers p {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.main__accounts_acc .acc-today {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.main__accounts_acc .acc-today p {
+  color: var(--LimeGreen);
+}
+.main__accounts_acc .acc-today p.down {
+  color: var(--BrightRed);
+}
+.main__overview {
+  margin-top: 2rem;
+}
+.main__overview-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.main__overview__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.main__overview__grid__item {
+  padding: 2rem 1.5rem;
+  background-color: var(--CardBG);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 0.5rem;
+}
+.main__overview__grid__item .item-top, .main__overview__grid__item .item-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.main__overview__grid__item .item-bottom {
+  align-items: flex-end;
+}
+.main__overview__grid__item .item-bottom-t {
+  font-size: 3rem;
+  color: var(--Text2);
+}
+.main__overview__grid__item .item-bottom-percent {
+  align-items: center;
+  display: flex;
+  gap: 0.2rem;
+  padding-bottom: 0.4rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
